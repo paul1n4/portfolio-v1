@@ -6,7 +6,6 @@ function App() {
   return (
     <>
     <Router>
-      <h1>😭</h1>
       <Navbar />
       <Routes>
         <Route path='/' />
