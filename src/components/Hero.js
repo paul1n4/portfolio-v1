@@ -6,7 +6,7 @@ const Hero = () => {
     <Section>
       <Wrapper>
         <SectionContent>
-          <HeroH1>Paulina Valero</HeroH1>
+          <HeroH1>PAULINA VALERO</HeroH1>
           <HeroP>Frontend developer & Graphic Designer</HeroP>
         </SectionContent>
       </Wrapper>
@@ -15,13 +15,14 @@ const Hero = () => {
 }
 
 const Section = styled.section`
-  background: url(${background});
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${background});
   background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000000;
 `;
 
 const Wrapper = styled.div`
   height: 750px;
-  border: 1px solid blue;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,13 +30,13 @@ const Wrapper = styled.div`
 
 
 const SectionContent = styled.div`
-  border: 1px solid red;
   text-align: center;
 `;
 
 const HeroH1 = styled.h1`
   margin-block-end: 20px;
   font-size: 2.5rem;
+  font-weight: 300;
 `;
 
 const HeroP = styled.div`
