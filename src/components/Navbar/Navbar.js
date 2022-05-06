@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
+import {Link as LinkS} from 'react-scroll'
 import {Link} from 'react-router-dom'
-import {SidebarData} from './SidebarData'
+import {SidebarData} from '../SidebarData'
 import './Navbar.css'
 
 function Navbar() {
@@ -18,9 +19,9 @@ function Navbar() {
           <FaIcons.FaBars onClick={showSidebar}/>
         </Link>
           <ul className='nav-top'>
-            <li><Link to='about'>About</Link></li>
-            <li><Link to='projects'>Projects</Link></li>
-            <li><Link to='contact'>Contact</Link></li>
+            <li><LinkS to='about'>About</LinkS></li>
+            <li><LinkS to='projects'>Projects</LinkS></li>
+            <li><LinkS to='contact'>Contact</LinkS></li>
           </ul>
       </nav>
 
