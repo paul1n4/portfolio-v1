@@ -6,6 +6,8 @@
   align-items: center;
   color: white;
   padding: 24px;
+  position: sticky;
+  top: 0;
 }
 
 .navbar li {
@@ -15,6 +17,8 @@
 .navbar a {
   color: white;
   text-decoration: none;
+  cursor: pointer;
+  /* border: 1px solid red; */
 }
 
 .nav-top {
