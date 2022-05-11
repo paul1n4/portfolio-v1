@@ -1,39 +1,24 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
-import {Link as LinkS} from 'react-scroll'
-import {animateScroll as scroll } from 'react-scroll'
+import { animateScroll as scroll, Link as LinkS } from 'react-scroll'
 import {Link} from 'react-router-dom'
 import {SidebarData} from '../SidebarData'
 import './Navbar.css'
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false)
-
+  
   const showSidebar = () => setSidebar(!sidebar)
 
-  const [scrollNav, setScrollNav] = useState(false)
-
-  const changeNav = () => {
-    if(window.scrollY >= 60) {
-      setScrollNav(true)
-    } else {
-      setScrollNav(false)
-    }
-  }
-
-  useEffect(()=> {
-    window.addEventListener('scroll', changeNav)
-  },[] )
 
   const toggleHome = () => {
     scroll.scrollToTop();
   }
 
-
   return (
     <>
-      <nav scrollNav={scrollNav} className="navbar">
+      <nav className="navbar">
         <Link to='/' onClick={toggleHome} className='menu-logo'>Paulina Valero</Link>
         <Link to='#' className='menu-bars'>
           <FaIcons.FaBars onClick={showSidebar}/>
@@ -41,8 +26,11 @@ function Navbar() {
           <ul className='nav-top'>
             <li><LinkS to='about' 
                 smooth={true} 
+                spy={true} 
+                exact='true' 
+                offset={-150}
             >About</LinkS></li>
-            <li><LinkS to='projects'>Projects</LinkS></li>
+            <li><LinkS smooth={true}  to='projects'>Projects</LinkS></li>
             <li><LinkS to='contact'>Contact</LinkS></li>
           </ul>
       </nav>

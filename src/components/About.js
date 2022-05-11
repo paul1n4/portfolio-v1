@@ -1,14 +1,15 @@
 import styled from 'styled-components'
-import paulina from '../images/paulina.JPG'
+import paulina from '../images/paulina.jpg'
 
 function About() {
   return (
-    <div className="about">
+    <div id="about">
       <Wrapper>
         <AboutContent>
           <Abouth2>ABOUT ME</Abouth2>
           <Img src={paulina} alt="paulina smiling " />
           <p>Hi I'm Paulina, I'm a frontend developer and graphic designer.</p>
+          <p>I like to create things and to know how things are done.</p>
         </AboutContent>
       </Wrapper>
     </div>
@@ -17,13 +18,12 @@ function About() {
 
 
 const Wrapper = styled.div`
-  margin-inline-end: 40px;
-  margin-inline-start: 40px;
+ 
 `;
 
 const AboutContent = styled.div`
-  margin-block-start: 90px;
-  margin-block-end: 90px;
+  margin-block-start: 150px;
+  margin-block-end: 150px;
   text-align: center;
 `;
 

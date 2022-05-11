@@ -3,7 +3,7 @@ import background from '../images/background.jpg'
 
 const Hero = () => {
   return (
-    <Section id='about'>
+    <Section>
       <Wrapper>
         <SectionContent>
           <HeroH1>PAULINA VALERO</HeroH1>
