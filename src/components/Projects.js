@@ -1,8 +1,18 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import mfw from '../images/mfw.png'
 import nemium from '../images/nemium.png'
 
 function Projects() {
+
+  const handleMfw = () => {
+    window.open('https://musicforawhile.at/')
+  }
+ 
+  const handleNemium = () => {
+    window.open('https://paul1n4.github.io/curso-html-css/index.html')
+  }
+
   return (
     <ProjectsDiv id="projects">
       <Wrapper>
@@ -13,16 +23,16 @@ function Projects() {
             <Img src={mfw} alt="preview of website music for a while"/>
             <ProjectContent>
               <Projecth3>Music for a while</Projecth3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac tortor vel urna maximus tempor.</p>
-              <Button>Visit Site</Button> 
+              <p>Web page created for a music organization that promotes stage art. Created in wordpress and elementor and you can view the webpage in german.</p>
+              <Button onClick={handleMfw}>Visit Site</Button> 
             </ProjectContent>
           </Project>
           
           <Project>
             <ProjectContent>
-              <Projecth3>Music for a while</Projecth3>
+              <Projecth3>HTML and CSS course</Projecth3>
               <p>Created with vanilla html and css</p>
-              <Button>Visit Site</Button> 
+              <Button onClick={handleNemium}>Visit Site</Button> 
             </ProjectContent>
             <Img src={nemium} alt="preview of website music for a while"/>
           </Project>
@@ -53,14 +63,14 @@ const Projecth2 = styled.h2`
   font-size: 2rem;
   font-weight: 300;
   text-align: center;
-  margin-block-end: 30px;
+  margin-block-end: 50px;
 `;
 
 const Project = styled.div`
   display: flex;
   margin-block-end: 80px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 `;
 
 const ProjectContent = styled.div`
@@ -77,16 +87,20 @@ const Projecth3 = styled.h3`
 `;
 
 const Img = styled.img`
-  height: 400px;
-  margin-inline-end: 30px;
-  margin-inline-start: 30px;
+  height: 500px;
+  margin-inline-end: 50px;
+  margin-inline-start: 50px;
 `;
 
 const Button = styled.button`
-  padding-inline-start: 15px;
-  padding-inline-end: 15px;
-  padding-block-end: 5px;
-  padding-block-start: 5px;
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+  padding-block-end: 8px;
+  padding-block-start: 8px;
+  background: #ecdc88;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
 `;
 
 

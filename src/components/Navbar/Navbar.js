@@ -28,10 +28,10 @@ function Navbar() {
                 smooth={true} 
                 spy={true} 
                 exact='true' 
-                offset={-150}
+                offset={-190}
             >About</LinkS></li>
             <li><LinkS smooth={true}  to='projects'>Projects</LinkS></li>
-            <li><LinkS to='contact'>Contact</LinkS></li>
+            <li><LinkS smooth={true} to='contact'>Contact</LinkS></li>
           </ul>
       </nav>
 
