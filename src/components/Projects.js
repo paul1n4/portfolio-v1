@@ -31,7 +31,7 @@ function Projects() {
           <Project>
             <ProjectContent>
               <Projecth3>HTML and CSS course</Projecth3>
-              <p>Created with vanilla html and css</p>
+              <p>Created with vanilla html and css, shows 5 different ways to style the same content.</p>
               <Button onClick={handleNemium}>Visit Site</Button> 
             </ProjectContent>
             <Img src={nemium} alt="preview of website music for a while"/>
