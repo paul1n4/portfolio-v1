@@ -10,7 +10,6 @@ function Navbar() {
   
   const showSidebar = () => setSidebar(!sidebar)
 
-
   const toggleHome = () => {
     scroll.scrollToTop();
   }
@@ -31,7 +30,7 @@ function Navbar() {
                 offset={-190}
               >About</LinkS>
             </li>
-            <li><LinkS to='projects' smooth={true}  >Projects</LinkS></li>
+            <li><LinkS to='projects' smooth={true}   >Projects</LinkS></li>
             <li><LinkS to='contact' smooth={true} >Contact</LinkS></li>
           </ul>
       </nav>
@@ -43,13 +42,15 @@ function Navbar() {
               <AiIcons.AiOutlineClose />
             </Link>
           </li>
-          <li className="nav-link"><LinkS to='about' smooth={true}
-          spy={true} 
-          exact='true' 
-          offset={-190}
-          >About</LinkS></li>
-          <li className="nav-link"><LinkS to='projects' smooth={true} >Projects</LinkS></li>
-          <li className="nav-link"><LinkS to='contact' smooth={true} >Contact</LinkS></li>
+          <li className="nav-link">
+            <LinkS to='about' smooth={true}
+              spy={true} 
+              exact='true' 
+              offset={-190}
+              onClick={showSidebar}
+            >About</LinkS></li>
+          <li className="nav-link"><LinkS to='projects' smooth={true} onClick={showSidebar}>Projects</LinkS></li>
+          <li className="nav-link"><LinkS to='contact' smooth={true} onClick={showSidebar}>Contact</LinkS></li>
         </ul>
       </nav>
     </>

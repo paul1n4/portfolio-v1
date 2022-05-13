@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import background from '../images/background.jpg'
+import background from '../images/background-1000px.jpg'
 
 const Hero = () => {
   return (
