@@ -3,7 +3,6 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { animateScroll as scroll, Link as LinkS } from 'react-scroll'
 import {Link} from 'react-router-dom'
-import {SidebarData} from '../SidebarData'
 import './Navbar.css'
 
 function Navbar() {
@@ -19,19 +18,21 @@ function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <Link to='/' onClick={toggleHome} className='menu-logo'>Paulina Valero</Link>
+        <LinkS to='/' onClick={toggleHome} className='menu-logo'>Paulina Valero</LinkS>
         <Link to='#' className='menu-bars'>
           <FaIcons.FaBars onClick={showSidebar}/>
         </Link>
           <ul className='nav-top'>
-            <li><LinkS to='about' 
+            <li>
+              <LinkS to='about' 
                 smooth={true} 
                 spy={true} 
                 exact='true' 
                 offset={-190}
-            >About</LinkS></li>
-            <li><LinkS smooth={true}  to='projects'>Projects</LinkS></li>
-            <li><LinkS smooth={true} to='contact'>Contact</LinkS></li>
+              >About</LinkS>
+            </li>
+            <li><LinkS to='projects' smooth={true}  >Projects</LinkS></li>
+            <li><LinkS to='contact' smooth={true} >Contact</LinkS></li>
           </ul>
       </nav>
 
@@ -42,16 +43,13 @@ function Navbar() {
               <AiIcons.AiOutlineClose />
             </Link>
           </li>
-          {SidebarData.map((item, index) => {
-            return (
-              <li key={index} className={item.cName}>
-                <Link to={item.path}>
-                  {item.icon}
-                  <span>{item.title} </span>
-                </Link>
-              </li>
-            )
-          })}
+          <li className="nav-link"><LinkS to='about' smooth={true}
+          spy={true} 
+          exact='true' 
+          offset={-190}
+          >About</LinkS></li>
+          <li className="nav-link"><LinkS to='projects' smooth={true} >Projects</LinkS></li>
+          <li className="nav-link"><LinkS to='contact' smooth={true} >Contact</LinkS></li>
         </ul>
       </nav>
     </>
