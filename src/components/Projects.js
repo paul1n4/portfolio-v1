@@ -109,6 +109,7 @@ const Img = styled.img`
 `;
 
 const Button = styled.button`
+  color: #fff;
   padding-inline-start: 20px;
   padding-inline-end: 20px;
   padding-block-end: 8px;
