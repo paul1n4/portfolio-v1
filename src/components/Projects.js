@@ -19,23 +19,23 @@ function Projects() {
         <ProjectsContent>
           <Projecth2>PROJECTS</Projecth2>
 
-          <Project>
+          <ProjectOne>
             <Img src={mfw} alt="preview of website music for a while"/>
             <ProjectContent>
               <Projecth3>Music for a while</Projecth3>
               <p>Web page created for a music organization that promotes stage art. Created in wordpress and elementor and you can view the webpage in german.</p>
               <Button onClick={handleMfw}>Visit Site</Button> 
             </ProjectContent>
-          </Project>
+          </ProjectOne>
           
-          <Project>
+          <ProjectTwo>
             <ProjectContent>
               <Projecth3>HTML and CSS course</Projecth3>
               <p>Created with vanilla html and css, shows 5 different ways to style the same content.</p>
               <Button onClick={handleNemium}>Visit Site</Button> 
             </ProjectContent>
             <Img src={nemium} alt="preview of website music for a while"/>
-          </Project>
+          </ProjectTwo>
 
         </ProjectsContent>
       </Wrapper>
@@ -66,11 +66,26 @@ const Projecth2 = styled.h2`
   margin-block-end: 50px;
 `;
 
-const Project = styled.div`
+const ProjectOne = styled.div`
   display: flex;
   margin-block-end: 80px;
   align-items: center;
   justify-content: space-around;
+  @media screen and (max-width: 480px) {
+   flex-direction: column-reverse;
+   text-align: center;
+  }
+`;
+
+const ProjectTwo = styled.div`
+  display: flex;
+  margin-block-end: 80px;
+  align-items: center;
+  justify-content: space-around;
+  @media screen and (max-width: 480px) {
+   flex-direction: column;
+   text-align: center;
+  }
 `;
 
 const ProjectContent = styled.div`
@@ -90,6 +105,7 @@ const Img = styled.img`
   height: 500px;
   margin-inline-end: 50px;
   margin-inline-start: 50px;
+  
 `;
 
 const Button = styled.button`
@@ -101,6 +117,10 @@ const Button = styled.button`
   border-radius: 8px;
   border: none;
   cursor: pointer;
+
+  @media screen and (max-width: 480px) {
+    margin-block-end: 30px;
+  }
 `;
 
 

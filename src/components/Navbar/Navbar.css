@@ -16,6 +16,8 @@
 
 .navbar a {
   color: white;
+  padding-inline-end: 16px;
+  padding-inline-start: 16px;
   text-decoration: none;
   cursor: pointer;
 }
