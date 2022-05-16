@@ -18,13 +18,16 @@ function About() {
 
 
 const Wrapper = styled.div`
- 
+  max-width: 902px;
+  margin: auto;
 `;
 
 const AboutContent = styled.div`
+  text-align: center;
   margin-block-start: 150px;
   margin-block-end: 150px;
-  text-align: center;
+  padding-inline-start: 25px;
+  padding-inline-end: 25px;
 `;
 
 const Abouth2 = styled.h2`

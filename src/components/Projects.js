@@ -55,8 +55,8 @@ const Wrapper = styled.div`
 const ProjectsContent = styled.div`
   padding-block-start: 100px;
   padding-block-end: 100px;
-  padding-inline-start: 16px;
-  padding-inline-end: 16px;
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
 `;
 
 const Projecth2 = styled.h2`
@@ -109,7 +109,7 @@ const Img = styled.img`
 `;
 
 const Button = styled.button`
-  color: #fff;
+  color: #000;
   padding-inline-start: 20px;
   padding-inline-end: 20px;
   padding-block-end: 8px;
