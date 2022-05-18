@@ -4,6 +4,7 @@ import * as AiIcons from 'react-icons/ai';
 import { animateScroll as scroll, Link as LinkS } from 'react-scroll'
 import {Link} from 'react-router-dom'
 import './Navbar.css'
+import logo from '../../images/Logo.svg'
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false)
@@ -17,7 +18,10 @@ function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <LinkS to='/' onClick={toggleHome} className='menu-logo'>Paulina Valero</LinkS>
+        <div>
+          <img src={logo} alt='Outline logo' className='logo'/>
+          <LinkS to='/' onClick={toggleHome} className='menu-logo'>Paulina Valero</LinkS>
+        </div>
         <Link to='#' className='menu-bars'>
           <FaIcons.FaBars onClick={showSidebar}/>
         </Link>

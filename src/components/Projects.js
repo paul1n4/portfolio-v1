@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import mfw from '../images/mfw.png'
 import nemium from '../images/nemium.png'
