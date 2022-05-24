@@ -18,7 +18,7 @@ function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <div>
+        <div className='home-menu'>
           <img src={logo} alt='Outline logo' className='logo'/>
           <LinkS to='/' onClick={toggleHome} className='menu-logo'>Paulina Valero</LinkS>
         </div>
